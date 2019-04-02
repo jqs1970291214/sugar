@@ -2,6 +2,7 @@ package com.junqson.provider;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.ServiceInstance;
@@ -32,6 +33,9 @@ public class ConsumerApplication {
     @RestController
     static class ConsumerController {
 
+        @Value("${greeting}")
+        public String greet;
+
 
         @Autowired
         private LoadBalancerClient loadBalancerClient;
@@ -42,6 +46,11 @@ public class ConsumerApplication {
         @Autowired
         private RestTemplate restTemplate;
 
+
+        @GetMapping("/greeting")
+        public String greeting() {
+            return this.greet;
+        }
 
         @GetMapping("/services")
         public List<String> getServices() {

@@ -6,3 +6,9 @@ student:
   name: Junqson
   sex: male
 
+# config/consumer-dev/data
+greeting: hello
+server:
+  port: 8002
+
+

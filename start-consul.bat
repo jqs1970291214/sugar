@@ -1,1 +1,1 @@
-E:\consul\consul.exe agent -dev
+.\consul\consul.exe agent -server
