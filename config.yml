@@ -1,0 +1,8 @@
+# config/registry-config-server-dev/data
+
+school: SDUFE
+student:
+  id: 1000
+  name: Junqson
+  sex: male
+
