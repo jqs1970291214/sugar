@@ -1,17 +1,17 @@
 spring:
   application:
-    name: consumer
+    name: provider
   cloud:
     consul:
       host: localhost
       port: 8500
       discovery:
-        service-name: consumer
+        service-name: provider
     config:
       uri: http://localhost:9999/
       profile: default
       label: master
 server:
-  port: 8100
+  port: 8000
 
 

@@ -1,4 +1,4 @@
-package com.junqson.provider;
+package com.junqson.consumer;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -73,7 +73,7 @@ public class ConsumerApplication {
 
         @GetMapping("/provider/consume")
         public String consume(String id) {
-            String uri = discover("service-producer") + "/provider/getid?id=" + id;
+            String uri = discover("service-producer") + "/contentservice/getid?id=" + id;
             System.out.println(uri);
 
             String response = restTemplate.getForObject(uri, String.class);

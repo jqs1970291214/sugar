@@ -1,4 +1,4 @@
-package com.junqson.provider;
+package com.junqson.contentservice;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +16,7 @@ public class IndexController {
 
     @GetMapping("/provider/getid")
     public String getId(String id) {
-        return "provider:" + id;
+        return "contentservice:" + id;
     }
 
 }

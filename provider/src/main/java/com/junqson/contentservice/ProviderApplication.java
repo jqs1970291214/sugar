@@ -1,4 +1,4 @@
-package com.junqson.provider;
+package com.junqson.contentservice;
 
 
 import org.springframework.boot.SpringApplication;
